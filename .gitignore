@@ -1,0 +1,13 @@
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Virtual Environment (se hai un venv nella radice, altrimenti puoi ometterlo)
+venv/
+
+# Node.js dependencies (per il frontend, se non lo specifichi in frontend/.gitignore)
+# node_modules/
+# dist/
+
+# Debug and log files (general)
+# *.log
