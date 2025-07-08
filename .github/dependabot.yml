@@ -1,0 +1,40 @@
+# To enable Dependabot updates, create a .github/dependabot.yml file
+# in your repository.
+# For all configuration options, see:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  # Python dependencies for the backend
+  - package-ecosystem: "pip"
+    directory: "/backend" # Percorso alla cartella del backend
+    schedule:
+      interval: "weekly" # Controlla le dipendenze ogni settimana
+    # Puoi aggiungere altre opzioni qui, ad esempio:
+    # labels:
+    #   - "backend"
+    #   - "dependencies"
+    # commit-message:
+    #   prefix: "fix"
+    #   prefix-development: "chore"
+    #   include: "scope"
+
+  # JavaScript dependencies for the frontend
+  - package-ecosystem: "npm"
+    directory: "/frontend" # Percorso alla cartella del frontend
+    schedule:
+      interval: "weekly" # Controlla le dipendenze ogni settimana
+    # Puoi aggiungere altre opzioni qui, ad esempio:
+    # labels:
+    #   - "frontend"
+    #   - "dependencies"
+    # commit-message:
+    #   prefix: "feat"
+    #   prefix-development: "chore"
+    #   include: "scope"
+
+  # GitHub Actions (se ne usi, è una buona pratica tenerle aggiornate)
+  - package-ecosystem: "github-actions"
+    directory: "/" # Le azioni sono spesso nella radice o in .github/workflows
+    schedule:
+      interval: "weekly"
